@@ -43,7 +43,6 @@
             this.txtNomParticipante = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
-            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -53,20 +52,21 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsRegistrar,
             this.tsModificar,
             this.tsEliminar,
             this.toolStripSeparator1,
             this.tsSalir});
-            this.toolStrip1.Location = new System.Drawing.Point(709, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(91, 520);
             this.toolStrip1.TabIndex = 0;
@@ -79,6 +79,7 @@
             this.tsRegistrar.Name = "tsRegistrar";
             this.tsRegistrar.Size = new System.Drawing.Size(88, 20);
             this.tsRegistrar.Text = "REGISTRAR";
+            this.tsRegistrar.Click += new System.EventHandler(this.tsRegistrar_Click);
             // 
             // tsModificar
             // 
@@ -126,7 +127,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(102, 237);
+            this.label2.Location = new System.Drawing.Point(196, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 18);
             this.label2.TabIndex = 2;
@@ -137,7 +138,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label3.Location = new System.Drawing.Point(102, 203);
+            this.label3.Location = new System.Drawing.Point(196, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 18);
             this.label3.TabIndex = 2;
@@ -148,7 +149,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label4.Location = new System.Drawing.Point(102, 169);
+            this.label4.Location = new System.Drawing.Point(196, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 18);
             this.label4.TabIndex = 2;
@@ -159,7 +160,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label5.Location = new System.Drawing.Point(102, 135);
+            this.label5.Location = new System.Drawing.Point(196, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 18);
             this.label5.TabIndex = 2;
@@ -167,39 +168,32 @@
             // 
             // txtNomParticipante
             // 
-            this.txtNomParticipante.Location = new System.Drawing.Point(258, 136);
+            this.txtNomParticipante.Location = new System.Drawing.Point(352, 136);
             this.txtNomParticipante.Name = "txtNomParticipante";
             this.txtNomParticipante.Size = new System.Drawing.Size(352, 20);
             this.txtNomParticipante.TabIndex = 3;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(258, 201);
+            this.txtEmail.Location = new System.Drawing.Point(352, 201);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(352, 20);
             this.txtEmail.TabIndex = 3;
             // 
             // cboTipoDocumento
             // 
+            this.cboTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoDocumento.FormattingEnabled = true;
-            this.cboTipoDocumento.Location = new System.Drawing.Point(258, 237);
+            this.cboTipoDocumento.Location = new System.Drawing.Point(352, 237);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
             this.cboTipoDocumento.Size = new System.Drawing.Size(192, 21);
             this.cboTipoDocumento.TabIndex = 4;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(258, 167);
-            this.txtTelefono.Mask = "000000000";
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(192, 20);
-            this.txtTelefono.TabIndex = 5;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(94, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(706, 85);
             this.panel1.TabIndex = 6;
@@ -209,7 +203,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(102, 106);
+            this.label6.Location = new System.Drawing.Point(196, 106);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 18);
             this.label6.TabIndex = 8;
@@ -220,7 +214,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
             this.lblCodigo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCodigo.Location = new System.Drawing.Point(259, 106);
+            this.lblCodigo.Location = new System.Drawing.Point(353, 106);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(35, 13);
             this.lblCodigo.TabIndex = 9;
@@ -238,7 +232,7 @@
             this.lvParticipantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lvParticipantes.GridLines = true;
             this.lvParticipantes.HideSelection = false;
-            this.lvParticipantes.Location = new System.Drawing.Point(37, 305);
+            this.lvParticipantes.Location = new System.Drawing.Point(131, 305);
             this.lvParticipantes.Name = "lvParticipantes";
             this.lvParticipantes.Size = new System.Drawing.Size(633, 183);
             this.lvParticipantes.TabIndex = 10;
@@ -270,17 +264,25 @@
             this.columnHeader5.Text = "DOCUMENTO";
             this.columnHeader5.Width = 103;
             // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(352, 167);
+            this.txtTelefono.Mask = "000000000";
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(192, 20);
+            this.txtTelefono.TabIndex = 11;
+            // 
             // frmRegistroParticipantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 520);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lvParticipantes);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.cboTipoDocumento);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNomParticipante);
@@ -317,7 +319,6 @@
         private System.Windows.Forms.TextBox txtNomParticipante;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ComboBox cboTipoDocumento;
-        private System.Windows.Forms.MaskedTextBox txtTelefono;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblCodigo;
@@ -327,5 +328,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.MaskedTextBox txtTelefono;
     }
 }
