@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/mysticBel/pj_w2_cl1_ej2/master/GUI_final.png" width="400"/>
 Proyecto realizado en Visual Studio, .NET Framework.
-Se implementó una aplicación de escritorio aplicando la metodología orientada a objetos y almacenando los datos en colecciones usando List<Of> y foreach.
+Se implementó una aplicación de escritorio aplicando la metodología orientada a objetos y almacenando los datos en colecciones usando List < Of > y foreach.
 
 ## Notas :
 - apuntes de clase
