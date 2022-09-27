@@ -46,6 +46,17 @@ namespace POOI_CL1_MaribelMaza_ejer2
             objP.email = txtEmail.Text;
             objP.tipoDocumento = cboTipoDocumento.Text;
 
+            //Validación del nombre
+            foreach (Participante p in lParticipantes)
+            {
+                if (p.nombParticipante == objP.nombParticipante)
+                {
+                    MessageBox.Show("Participante ya se encuentra registrado…!!");
+                    limpiarControles();
+                    return;
+                }
+            }
+
             //Enviar la información a la colección
             lParticipantes.Add(objP);
             listaParticipantes();
