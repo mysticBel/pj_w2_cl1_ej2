@@ -88,6 +88,7 @@
             this.tsModificar.Name = "tsModificar";
             this.tsModificar.Size = new System.Drawing.Size(88, 20);
             this.tsModificar.Text = "MODIFICAR";
+            this.tsModificar.Click += new System.EventHandler(this.tsModificar_Click);
             // 
             // tsEliminar
             // 
@@ -96,6 +97,7 @@
             this.tsEliminar.Name = "tsEliminar";
             this.tsEliminar.Size = new System.Drawing.Size(88, 20);
             this.tsEliminar.Text = "ELIMINAR";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -109,6 +111,7 @@
             this.tsSalir.Name = "tsSalir";
             this.tsSalir.Size = new System.Drawing.Size(88, 20);
             this.tsSalir.Text = "SALIR";
+            this.tsSalir.Click += new System.EventHandler(this.tsSalir_Click);
             // 
             // label1
             // 
@@ -238,6 +241,7 @@
             this.lvParticipantes.TabIndex = 10;
             this.lvParticipantes.UseCompatibleStateImageBehavior = false;
             this.lvParticipantes.View = System.Windows.Forms.View.Details;
+            this.lvParticipantes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvParticipantes_MouseDoubleClick);
             // 
             // columnHeader1
             // 

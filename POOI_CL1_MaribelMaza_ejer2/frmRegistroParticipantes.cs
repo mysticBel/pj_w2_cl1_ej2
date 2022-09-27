@@ -55,6 +55,12 @@ namespace POOI_CL1_MaribelMaza_ejer2
                     limpiarControles();
                     return;
                 }
+                if (p.email == objP.email)
+                {
+                    MessageBox.Show("Este correo electrónico ya se encuentra registrado");
+                    limpiarControles();
+                    return;
+                }
             }
 
             //Enviar la información a la colección
@@ -86,6 +92,58 @@ namespace POOI_CL1_MaribelMaza_ejer2
             txtEmail.Clear();
             cboTipoDocumento.SelectedIndex = -1;
             txtNomParticipante.Focus();
+        }
+
+        private void lvParticipantes_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewItem elemento = lvParticipantes.GetItemAt(e.X, e.Y);
+
+            lblCodigo.Text = elemento.Text;
+            txtNomParticipante.Text = elemento.SubItems[1].Text;
+            txtTelefono.Text = elemento.SubItems[2].Text;
+            txtEmail.Text = elemento.SubItems[3].Text;
+            cboTipoDocumento.Text = elemento.SubItems[4].Text;
+        }
+
+        private void tsModificar_Click(object sender, EventArgs e)
+        {
+            foreach (Participante p in lParticipantes)
+            {
+                if (p.codigo == lblCodigo.Text)
+                {
+                    p.nombParticipante = txtNomParticipante.Text;
+                    p.telefono = txtTelefono.Text;
+                    p.email = txtEmail.Text;
+                    p.tipoDocumento = cboTipoDocumento.Text;
+                    break;
+                }
+            }
+            listaParticipantes();
+            limpiarControles();
+        }
+
+        private void tsEliminar_Click(object sender, EventArgs e)
+        {
+            foreach (Participante p in lParticipantes)
+            {
+                if (p.codigo == lblCodigo.Text)
+                {
+                    lParticipantes.Remove(p);
+                    break;
+                }
+            }
+            listaParticipantes();
+            limpiarControles();
+        }
+
+        private void tsSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Esta seguro de salir?", "Salir",
+                              MessageBoxButtons.YesNo, 
+                              MessageBoxIcon.Error);
+            
+            if (dr == DialogResult.Yes) 
+                this.Close();
         }
     }
 }
