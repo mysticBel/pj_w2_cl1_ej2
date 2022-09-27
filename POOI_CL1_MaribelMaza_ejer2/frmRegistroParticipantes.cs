@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POOI_CL1_MaribelMaza_ejer2
 {
-    public partial class Form1 : Form
+    public partial class frmRegistroParticipantes : Form
     {
-        public Form1()
+        public frmRegistroParticipantes()
         {
             InitializeComponent();
         }
